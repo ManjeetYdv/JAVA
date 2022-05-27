@@ -8,7 +8,7 @@ public class negative_one_side {
         oneside(arr);
 
         for(int i= 0;i<arr.length ;i++){
-            System.out.print(arr[0] + " ");
+            System.out.print(arr[i] + " ");
         }
 
 
