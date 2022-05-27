@@ -25,8 +25,9 @@ public class negative_one_side {
                     temp = arr[i];
                     arr[i]=arr[j];
                     arr[j]=temp;
-                    j++;
+                    
                 }
+                j++;
 
             }
         }
