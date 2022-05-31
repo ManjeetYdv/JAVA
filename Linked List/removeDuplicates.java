@@ -73,6 +73,8 @@ public class LL {
                     node = node.next;
                 }
             }
+          tail = node;
+          tail.next = null;
 
     }
 
@@ -93,6 +95,8 @@ public class LL {
             }
             ptr1 = ptr1.next;
         }
+        tail = ptr1;
+        tail.next = null;
     }
 
     public static void main(String[] args) {
