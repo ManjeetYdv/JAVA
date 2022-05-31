@@ -93,10 +93,10 @@ public class LL {
                     ptr2 = ptr2.next;
                 }
             }
+             tail = ptr1;
             ptr1 = ptr1.next;
         }
-        tail = ptr1;
-        tail.next = null;
+       
     }
 
     public static void main(String[] args) {
