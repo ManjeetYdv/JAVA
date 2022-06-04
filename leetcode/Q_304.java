@@ -28,7 +28,7 @@ class NumMatrix {
 
 /**
  * Your NumMatrix object will be instantiated and called as such:
- * NumMatrix obj = new NumMatrix(matrix);
+ * NumMatrix obj =  new NumMatrix(matrix);
  * int param_1 = obj.sumRegion(row1,col1,row2,col2);
  
  in brute force you can get the resulst in O(n^2) for each sumregion calculations. We can avoid O(n^2) for each calculations by only perform on O(n^2) when we create a prefix array, O(n) for each sumregion calculation.
