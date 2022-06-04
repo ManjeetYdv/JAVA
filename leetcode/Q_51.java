@@ -62,6 +62,7 @@ class TUF {
         return res;
     }
     public static void main(String args[]) {
+        
         int N = 4;
         List < List < String >> queen = solveNQueens(N);
         int i = 1;
