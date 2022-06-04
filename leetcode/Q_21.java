@@ -30,6 +30,7 @@ class Solution {
             }
         }
         while(p1!=null){
+            
               curr.next = p1;
                p1=p1.next;
                curr= curr.next;
