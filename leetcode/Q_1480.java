@@ -9,6 +9,7 @@ class Solution {
         for(int i=1 ;i<sum.length ;i++){
             sum[i]+=sum[i-1];
         }
+        
         return sum;
         
     }
