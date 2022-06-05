@@ -71,6 +71,7 @@ class TUF {
             for (String s: it) {
                 System.out.println(s);
             }
+            
             System.out.println();
             i += 1;
         }
