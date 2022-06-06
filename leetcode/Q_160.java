@@ -31,11 +31,10 @@ public class Solution {
             l2+=1;
             
         }
-        
-        int diff = l1-l2;
+        int diff = Math.abs(l1-l2);
         ListNode dummy = new ListNode();
         
-        if(diff <0){
+        if(l2>l1){
             dummy =headB;
         }
         else{
@@ -47,7 +46,7 @@ public class Solution {
             
         }
         
-        if(diff <0){
+        if(l2>l1){
             ptr2=dummy;
             ptr1=headA;
         }
