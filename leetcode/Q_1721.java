@@ -15,6 +15,7 @@ class Solution {
    
     public ListNode swapNodes(ListNode head, int k) {
         
+        
         ListNode fast = head;
         ListNode slow = head;
         
@@ -22,9 +23,9 @@ class Solution {
             fast = fast.next;
         }
         ListNode kth = fast;
-        fast = fast.next;
+       
         
-        while(fast!=null){
+        while(fast.next!=null){
             slow = slow.next;
             fast =fast.next;
         }
