@@ -1,26 +1,29 @@
 class Solution {
-    public String reverseWords(String s) {
+    public String reverseWords(String str) {
         
-//      The string \s is a regular expression that means "whitespace", and you have to write it with two backslash characters ( "\\s" ) when writing it as a string in Java.   
+
+           str.trim();
+           Stack<String> stack = new Stack<>();
         
-    String[] words = s.split("\\s");
-    
-    StringBuilder str = new StringBuilder("");
-    
-     for(int i=words.length-1; i>=0; i--) {
-        
-        if(words[i] == "") {
-          
-            continue;
+        for(int i=0 ;i<str.length();i++){
+            String temp="";
+
+            while( i< str.length() && str.charAt(i)!=' '){
+                temp+=str.charAt(i);
+                i++;
+
+            }
+           if(temp.equals("")) continue;
+            stack.push(temp);
+        }
+
+        String result = stack.peek();
+        stack.pop();
+        while(!stack.isEmpty()){
+           result+=" "+stack.peek();
+            stack.pop();
         }
         
-        if(i==0) {
-            str.append(words[i]);
-        }
-        else
-        str.append(words[i]+" ");
-    }
-    
-    return str.toString().trim();
+        return result.trim();
     }
 }
