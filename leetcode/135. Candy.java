@@ -30,7 +30,8 @@ class Solution {
         }
         return result;
         
-        // below code is not optimized for consequtive similar ratings
+        
+        //code below is mine that fucks up on consecutive same ratings .....:
         
 //        int[] candies = new int[arr.length];
 //        Arrays.fill(candies , 1);
