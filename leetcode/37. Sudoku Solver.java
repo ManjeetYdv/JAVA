@@ -17,14 +17,15 @@ class Solution {
             }
           }
 
-          return false;
+          return false;     //no 1-9 was valid
         }
       }
     }
-    return true;
+    return true;       //no empty place find in the entire board , return true;
   }
     
     public boolean isValid(char[][] board, int row, int col, char c) {
+   
     for (int i = 0; i < 9; i++) {
       if (board[i][col] == c)
         return false;
