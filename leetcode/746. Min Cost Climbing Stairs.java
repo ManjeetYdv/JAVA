@@ -24,9 +24,9 @@ class Solution {
         
         for(int i: cost){
             
-            int temp=prev2;
-            prev2=prev1;
-            prev1 =i+Integer.min(temp ,prev1);
+                int temp=prev2;
+                prev2 =i+Integer.min(prev1, prev2);
+                prev1 =temp;
         }
         
         return Integer.min(prev1, prev2);
