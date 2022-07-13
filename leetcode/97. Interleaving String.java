@@ -17,7 +17,7 @@ class Solution {
         }
 
         
-        //fill the second row
+        //fill the first col
         for (int i = 1; i < dp.length; i++){
             dp[i][0] = dp[i-1][0]&&(s2.charAt(i-1)==s3.charAt(i-1));
         }
