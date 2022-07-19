@@ -1,30 +1,33 @@
 class Solution {
     
-     public static List<Integer> pascal_IthRow(int n){
-        List<Integer> row =  new LinkedList<Integer>();
+    public List<Integer> pascalRow(int n){
+
+        List<Integer> row = new ArrayList<>();
+        row.add(1);
+        
         int res=1;
-        row.add(res);
-        n= n-1;
-       
-        for(int i=0 ;i<n ;i++){
-            res *=(n-i);
-            res/= (i+1);
+        for(int i=0 ; i<n ;i++ ){
+            
+            res*= (n-i);
+            res/=(i+1);
             row.add(res);
         }
-
+        
         return row;
-}
-    
-    public List<List<Integer>> generate(int n) {
         
         
-          List<List<Integer>> pascal =  new ArrayList<List<Integer>>();
-        List<Integer> row = new LinkedList<Integer>();
-
-        for(int i= 1 ;i<=n ;i++){
-            row= pascal_IthRow(i);
+        
+        
+    }
+    public List<List<Integer>> generate(int numRows) {
+        
+        List<List<Integer>> pascal = new ArrayList<>();
+        
+        for(int i=0 ; i< numRows ;i++){
+            List<Integer> row =pascalRow(i);
             pascal.add(row);
         }
+        
         return pascal;
     }
 }
