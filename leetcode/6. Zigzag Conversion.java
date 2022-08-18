@@ -1,51 +1,40 @@
 class Solution {
     public String convert(String s, int numRows) {
-        //Brute Force  , will optimize later
+    
+       
         if(numRows==1) return s;
+         
+        HashMap<Integer , String> map = new HashMap<>();
         
-        char [][] arr = new char[numRows][s.length()];
-        for(char[] a : arr){
-            Arrays.fill(a , '/');
-        }
-        int i=0;
-        int j=0;
-        int down =1;
+        int down=1;
         int up=0;
-        for(int k=0 ;k<s.length() ;k++){
+        int currRow=0;
+        
+        for(int i=0 ;i<s.length() ;i++){
+            map.put(currRow , map.getOrDefault(currRow , "")+s.charAt(i));
             
             if(down==1){
-                arr[i][j]= s.charAt(k);
-                
-                if(i==numRows-1){
+                if(currRow==numRows-1){
                     down=0;
                     up=1;
-                    i--;
-                    j++; 
-                    
+                    currRow--;
                 }
-                else i++;
+                else currRow++; 
             }
-           else if(up==1){
-                
-                arr[i][j] = s.charAt(k);
-                if(i==0){
-                    down=1;
+            
+            else if(up==1){
+                if(currRow==0){
                     up=0;
-                    i++;
+                    down=1;
+                    currRow++;
                 }
-                else {
-                    i--;
-                    j++;
-                }
+                else currRow--;
             }
         }
-        String res ="";
-        for(char []a : arr){
-            for(char ch : a){
-                if(ch!='/') res+=ch;
-            }
+        String res="";
+        for(int i : map.keySet()){
+            res+=map.get(i);
         }
         return res;
-        
     }
 }
