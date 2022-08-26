@@ -1,4 +1,18 @@
 class Solution {
+    
+//     Main logic is calculating all powers of 2 less than 10^9 i.e 2^0 - 2^29
+// and sort the values and add them to set
+// We will sort in decreasing order to avoid edges cases and some extra checks
+// ( Cases like - 10 , here sorted it will be 01 or 1 and set will have 1 (2^0) and function will return true.. not false )
+
+// After filling the set
+// We will do the same to the number to be checked... sort it in decreasing order
+
+// we will return true if the new number is there is set else false;
+
+// It works but needs optimization and i m too lazy to learn bit manupulation rn
+    
+    
     public boolean reorderedPowerOf2(int n) {
         
        Set<Integer> set = new HashSet<>();
