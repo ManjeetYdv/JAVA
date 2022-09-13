@@ -3,7 +3,7 @@ class Solution {
        
         if(arr.length<3) return 0;
         
-        Arrays.sort(arr);
+        
         int maxFib =0;
         HashMap<Integer , Integer> map = new HashMap<>();
         
