@@ -1,35 +1,13 @@
-package com.company;
-
-import java.util.Collections;
-import java.util.PriorityQueue;
-
-public class kth_smallest {
-    public static void main(String[] args) {
-
-        int[] arr ={40,  30 , 20 , 10};
-        int k=2;
-        int kth =kthsmallest(arr , k);
-        System.out.println("kth smallest element : "+ kth);
-
-
-    }
-    public static int kthsmallest(int[] arr  ,int k){
-
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());   //Max-heap
-
-        for(int i=0 ;i<k ;i++){
+class Solution{
+    public static int kthSmallest(int[] arr, int l, int r, int k) 
+    { 
+        //Your code here
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        
+        for(int i=l ;i<=r ;i++){
             pq.add(arr[i]);
-
+            if(pq.size()>k) pq.poll();
         }
-
-        for(int i=k ;i<arr.length ;i++){
-            if(pq.peek()>arr[i]){
-                pq.poll();
-                pq.add(arr[i]);
-            }
-        }
-
         return pq.peek();
-    }
-
+    } 
 }
