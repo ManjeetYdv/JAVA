@@ -24,22 +24,12 @@ class Solution {
         return res;
     }
     
-    private String sortCharArray(int powerof2){
-        
+     private String sortCharArray(int powerof2){
+
         String power = Integer.toString(powerof2);
         char[] chars = power.toCharArray();
-        
-        Character[] characters = new Character[chars.length];
-        for (int j = 0; j < characters.length; j++) {
-            characters[j] = chars[j];
-        }
-        Arrays.sort(characters , Collections.reverseOrder());
-        
-        for (int j = 0; j < characters.length; j++) {
-            chars[j] = characters[j];
-        }
-        String res = new String(chars);
-        return res;
-        
+        Arrays.sort(chars);
+        return new String(chars);
+
     }
 }
