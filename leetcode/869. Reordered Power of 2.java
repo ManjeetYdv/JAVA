@@ -4,7 +4,7 @@ class Solution {
         Set<String> set = new HashSet<>();
         for(int i=0 ;i<30 ;i++){
             
-            int powOfTwo = power2(i);
+            int powOfTwo = (int) Math.pow(2, i);
             String sortedPow = sortCharArray(powOfTwo);
             set.add(sortedPow);
         }
@@ -15,16 +15,7 @@ class Solution {
 
 
     }
-
-    private int power2(int n){
-        if(n==0) return 1;
-
-        int res=1;
-        for(int i=1 ;i<=n ;i++) res*=2;
-        return res;
-    }
-    
-     private String sortCharArray(int powerof2){
+    private String sortCharArray(int powerof2){
 
         String power = Integer.toString(powerof2);
         char[] chars = power.toCharArray();
